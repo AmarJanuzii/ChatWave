@@ -264,7 +264,9 @@ h1 {
   border: none !important;
 }
 
-
+.heading {
+  background: none !important;
+}
 h4 {
   font-size: 11pt !important;
   padding-bottom: 2px;
@@ -496,7 +498,12 @@ nav {
   font-size: max(72%, 12px);
   text-align: center;
 }
-
+.nav-info {
+  background: #f9c56c;
+  color: black;
+  padding: 12px 10px;
+  font-weight: bold;
+}
 .nav-info p {
   margin: 0;
 }
@@ -504,7 +511,7 @@ nav {
   background: #fcdbb8;
 }
 nav .top {
-  background: #A1B4C3;
+  background: #838383;
   padding: 15px 10px 14px 10px;
   display: flex;
   position: relative;
@@ -562,7 +569,7 @@ nav .top .right .support-right {
   margin-top: 5px;
 }
 nav .links {
-  background-color: #87A5BD;
+  background-color: #575757;
   padding: 3.5px 16px;
 }
 nav .links .icon {
@@ -640,7 +647,7 @@ footer .copyright {
   text-decoration-thickness: 0.5px;
 }
 .welcome {
-  background: #A1B4C3;
+  background: #b1b1b1;
   background-position: center center;
   background-size: cover;
   padding: 5px;
@@ -793,7 +800,7 @@ footer .copyright {
   border: 1px solid #575757;
 }
 .new-people .top {
-  background-color: #87A5BD;
+  background-color: #575757;
   overflow-wrap: break-word;
   word-break: break-word;
 }
@@ -847,12 +854,12 @@ footer .copyright {
   margin: 14px 0 3px 0;
 }
 .spa .heading {
-  background: #BDC5D2;
+  background: #575757;
   padding: 2px 7px;
 }
 
 .spa.orange .heading {
-  background: #BDC5D2;
+  background: #575757;
 }
 .spa .heading h4 {
   margin: 0;
@@ -876,7 +883,7 @@ footer .copyright {
 .specials .heading,
 .bulletin-preview .heading,
 .blog-sub-preview .heading {
-  background: #BDC5D2;
+  background: #575757;
   padding: 5px 7px;
   margin: 10px 8px 10px 0;
   color: white;
@@ -973,8 +980,8 @@ footer .copyright {
   width: 100%;
 }
 .info-box {
-  border: 1px solid #87A5BD;
-  background: #BDC5D2;
+  border: 1px solid #575757;
+  background: #b1b1b1;
   padding: 5px 5px 30px 5px;
   position: relative;
 }
@@ -1613,8 +1620,7 @@ table.bulletin-table {
 }
 .ex {
   font-size: 0.7em;
-  border: 1px solid #87A5BD;
-  background: #BDC5D2;
+  background: #545454;
   opacity: 0.7;
   padding: 1px 5px;
   border-radius: 2px;
@@ -2317,7 +2323,7 @@ img.blur-hover:hover {
   table-layout: fixed;
 }
 .f-col {
-  display: table-cell;
+
   vertical-align: top;
 }
 
@@ -2469,7 +2475,7 @@ blink {
     table-layout: fixed;
   }
   .col {
-    display: table-cell;
+
     vertical-align: top;
   }
   .col.w-10 {
@@ -2562,7 +2568,7 @@ blink {
     table-layout: fixed;
   }
   .m-col {
-    display: table-cell;
+
     vertical-align: top;
   }
   .m-hide {
