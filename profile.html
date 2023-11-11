@@ -43,7 +43,7 @@
           
           <div class="general-about home-actions">
             <div class="heading">
-              <h1>Hello, Amar Januzi!</h1>
+              <h4>Name: <script>document.write(localStorage.getItem('name'));</script></h4>
             </div>
             <div class="inner">
               <div class="profile-pic">
@@ -51,7 +51,8 @@
                   <img class="pfp-fallback" src="https://static.spacehey.net/img/default/profilepic.png" alt="your profile picture">
                 </a>
               </div>
-            
+              <button type="button" onclick="logout()" class="btn btn-default">Logout</button>
+
                 <button id="btnOpenForm">Edit Profile</button>
 
                 <div class="form-popup-bg">
@@ -122,7 +123,7 @@
   
           <div class="specials">
             <div class="heading">
-              <h4>SpaceHey Updates</h4>
+              <h4>Updates</h4>
             </div>
             <div class="inner">
               <ul class="updates">
@@ -138,26 +139,7 @@
                           <p>Hello (<a href="">view more</a>)</p>
                           <p>Im sick ): (<a href="">view more</a>)</p>
                         </div>
-            <div class="statistics col">
-              <div class="heading">
-                <h4 class="date">Nov 1, 2023</h4>
-              </div>
-              <div class="inner">
-                <div class="m-row">
-                  <div class="m-col">
-                    <p>Your Friends: <br> <a href="/friends?id=1217289"><span class="count">2</span></a></p>
-                  </div>
-                  <div class="m-col">
-                    <p>Joined: <br> <span class="count" title="March 16, 2022"><time class="ago" data-timestamp="1647439519" style="opacity: 1;">1 year ago</time></span></p>
-                  </div>
-                  <div class="m-col m-hide">
-                    <a class="donate-link" href="https://www.paypal.com/donate/?hosted_button_id=N8SEE3KK4C538" target="_blank" rel="noopener">
-                      <img style="margin:5px auto;width:85%;aspect-ratio:147/47;" src="https://static.spacehey.net/img/paypal_donate_with_cards.png" loading="lazy" title="Support SpaceHey!" alt="Donate with PayPal">
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+            
           </div>
           <div class="new-people cool">
             <div class="top">
@@ -245,7 +227,7 @@
     </footer>
   </div>     
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="script.js"></script>
+<script src="profile.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,25 @@
+let name=localStorage.getItem('name')?localStorage.getItem('name'):''
+        console.log(name);
+        if(name=='')
+        {
+          alert('U need to login first');
+          window.location.href="index.html";
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            // Load user details from localStorage
+            let name = localStorage.getItem('name');
+            let email = localStorage.getItem('email');
+        
+            // Display user details in the profile
+            document.getElementById('profileName').innerText = name;
+            document.getElementById('profileEmail').innerText = email;
+          });
+        
+          function logout() {
+            // Clear user details from localStorage
+            localStorage.removeItem('name');
+            localStorage.removeItem('email');
+        
+            // Redirect to the login page after logout
+            window.location.href = "index.html";
+          }

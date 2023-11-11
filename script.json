@@ -1,0 +1,71 @@
+function login() {
+    let email = document.getElementById("loginEmail").value;
+    let psw = document.getElementById("loginPwd").value;
+
+    let name = localStorage.getItem('name') ? localStorage.getItem('name') : '';
+
+    if (name !== '') {
+      window.location.href = "profile.html";
+    } else {
+      // Your login logic here
+      let user_records = JSON.parse(localStorage.getItem("users")) || [];
+      
+      if (user_records.some((v) => v.email === email && v.psw === psw)) {
+        alert("Login Pass");
+        let current_user = user_records.find((v) => v.email === email && v.psw === psw);
+        localStorage.setItem('name', current_user.name);
+        localStorage.setItem('email', current_user.email);
+        window.location.href = "profile.html";
+      } else {
+        alert('Login Fail');
+      }
+    }
+  }
+
+  function register() {
+    let name = document.getElementById("regName").value;
+    let email = document.getElementById("regEmail").value;
+    let psw = document.getElementById("regPwd").value;
+
+    let user_records = JSON.parse(localStorage.getItem("users")) || [];
+
+    if (user_records.some((v) => v.email === email)) {
+      alert("User already exists");
+    } else {
+      user_records.push({
+        "name": name,
+        "email": email,
+        "psw": psw
+      });
+      localStorage.setItem("users", JSON.stringify(user_records));
+
+      alert("Registration successful, please log in");
+    }
+  }
+
+
+
+
+
+function closeForm() {
+    $('.form-popup-bg').removeClass('is-visible');
+}
+
+$(document).ready(function() {
+    /* Contact Form Interactions */
+    $('#btnOpenForm').on('click', function(event) {
+        event.preventDefault();
+        $('.form-popup-bg').addClass('is-visible');
+    });
+
+    // Close popup when clicking x or off popup
+    $('.form-popup-bg').on('click', function(event) {
+        if ($(event.target).is('.form-popup-bg') || $(event.target).is('#btnCloseForm')) {
+            event.preventDefault();
+            closeForm(); // Call the closeForm function
+        }
+    });
+});
+
+
+
